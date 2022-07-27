@@ -10,7 +10,12 @@ const config = {
 	}),
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		alias: {
+			$lib: 'src/lib',
+			$api: 'src/api',
+			$components: 'src/components/'
+		}
 	}
 };
 
