@@ -2,10 +2,15 @@
 	import Hamburger from './hamburger.svelte';
 	import HeaderLink from './header-link.svelte';
 	import ThemeToggler from './theme-toggler.svelte';
+
 	const routes = [
 		{
 			link: '/',
 			text: 'Home'
+		},
+		{
+			link: '/projects',
+			text: 'Projects'
 		},
 		{
 			link: '/blog',
