@@ -1,9 +1,9 @@
 <script>
-	import Footer from '../components/footer/index.svelte';
-	import Header from '../components/header';
-	import { theme } from '../lib/stores/theme';
+	import Footer from '$components/footer/index.svelte';
+	import Header from '$components/header';
+	import { theme } from '$lib/stores/theme';
 
-	import { onMount } from 'svelte/types/runtime/internal/lifecycle';
+	import { onMount } from 'svelte';
 	import '../app.css';
 
 	onMount(() => {
