@@ -16,6 +16,9 @@ const config = {
 			fallback: null,
 			precompress: false
 		}),
+		prerender: {
+			default: true
+		},
 		alias: {
 			$lib: 'src/lib',
 			$api: 'src/api',
