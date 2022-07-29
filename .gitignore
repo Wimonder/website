@@ -1,0 +1,8 @@
+/node_modules/
+/.svelte-kit/
+/build/
+.yarn/*
+.pnp.*
+*/node_modules/
+
+.turbo
