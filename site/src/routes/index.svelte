@@ -45,7 +45,7 @@
 <section class="mt-4 flex">
 	<div class="pr-5">
 		<h1 class="mb-2 text-4xl font-bold">
-			<span class="text-soft mr-1">~$</span>{name}
+			<span class="text-soft mr-1 absolute -translate-x-full">~$</span>{name}
 		</h1>
 		<byline><TextContent blocks={short} /></byline>
 		<div class="space-x-4">
