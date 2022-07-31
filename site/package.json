@@ -15,7 +15,7 @@
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.22.2",
-		"@sveltejs/kit": "",
+		"@sveltejs/kit": "next",
 		"@tailwindcss/typography": "^0.5.4",
 		"@types/feather-icons": "^4.7.0",
 		"@types/prismjs": "^1.26.0",
