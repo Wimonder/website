@@ -45,7 +45,7 @@
 <section class="mt-4 flex">
 	<div class="pr-5">
 		<h1 class="mb-2 text-4xl font-bold">
-			<span class="text-soft mr-1 absolute -translate-x-full">~$</span>{name}
+			<span class="text-soft mr-1 absolute -translate-x-full sm:inline-block hidden">~$</span>{name}
 		</h1>
 		<byline><TextContent blocks={short} /></byline>
 		<div class="space-x-4">
@@ -60,11 +60,9 @@
 	</div>
 	<div>
 		<img
-			src="profile-picture.png"
+			src="profile-picture-500x500.webp"
 			alt="Wim's profile"
-			width="500"
-			height="500"
-			class="rounded-3xl sm:hidden md:block"
+			class="rounded-3xl sm:block hidden"
 		/>
 	</div>
 </section>
