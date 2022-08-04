@@ -8,7 +8,6 @@
 		month: 'long',
 		day: 'numeric'
 	});
-	console.log(post.publishedAt);
 </script>
 
 <svelte:head>

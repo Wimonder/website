@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Dropdown from './dropdown.svelte';
+
 	import Hamburger from './hamburger.svelte';
 	import HeaderLink from './header-link.svelte';
 	import ThemeToggler from './theme-toggler.svelte';
@@ -25,9 +27,9 @@
 	let open: boolean = false;
 </script>
 
-<nav class="flex h-16 w-full">
+<nav class="z-20 flex sm:h-16 h-12 w-full text-primary dark:text-primary-dark">
 	<div class="m-auto flex w-full max-w-4xl justify-between px-4">
-		<div class="flex sm:hidden">
+		<div class="sm:hidden flex items-center">
 			<Hamburger bind:open />
 		</div>
 		<div class="flex">
@@ -42,3 +44,4 @@
 		</div>
 	</div>
 </nav>
+<Dropdown bind:open {routes} />

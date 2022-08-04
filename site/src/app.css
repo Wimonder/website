@@ -137,3 +137,7 @@ html {
 		@apply transition duration-300;
 	}
 }
+
+#svelte {
+	@apply flex h-full min-h-screen w-full flex-col bg-background dark:bg-background-dark text-primary dark:text-primary-dark transition duration-300;
+}
