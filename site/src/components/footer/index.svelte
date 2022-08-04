@@ -62,7 +62,7 @@
 			<FooterHolder items={routes} />
 		{/each}
 	</div>
-	<p class="m-auto mt-20 mb-20 w-fit text-foreground text-center">
+	<p class="m-auto mt-20 mb-20 w-fit text-primary dark:text-primary-dark text-center">
 		Made by Wim Onderbeke with <i aria-hidden="true" class="text-red-600 inline-block w-5 h-5"
 			>{@html heartIcon.icon}</i
 		><span class="sr-only">{heartIcon.text}</span>, find this website on

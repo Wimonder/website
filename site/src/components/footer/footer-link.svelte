@@ -4,7 +4,7 @@
 </script>
 
 <a
-	class="inline-flex text-secondary hover:text-primary"
+	class="inline-flex text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
 	href={url}
 	target={newPage ? '_blank' : '_self'}
 >

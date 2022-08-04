@@ -11,14 +11,14 @@
 	{#each education as ed}
 		<li class="flex sm:my-2 my-4">
 			<div class="flex flex-col sm:flex-row">
-				<div class="w-24 sm:mr-20 text-secondary">
+				<div class="w-24 sm:mr-20 text-secondary dark:text-secondary-dark">
 					<time datetime={ed.start}>{new Date(ed.start).getFullYear()}</time>
 					-
 					<time datetime={ed.end}
 						>{ed.currentPosition || !ed.end ? ' Now' : new Date(ed.end).getFullYear()}</time
 					>
 				</div>
-				<span class="text-foreground">{ed.title}</span>
+				<span class="text-primary dark:text-primary-dark">{ed.title}</span>
 			</div>
 		</li>
 	{/each}

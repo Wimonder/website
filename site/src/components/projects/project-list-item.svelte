@@ -8,7 +8,7 @@
 </script>
 
 <a name={slug}>
-	<article class="text-foreground">
+	<article class="text-primary dark:text-primary-dark">
 		<h3 class="text-2xl text-inherit font-bold">{title}</h3>
 		<p>
 			<a class="text-blue-800 hover:underline" href={link}>Preview</a> ·

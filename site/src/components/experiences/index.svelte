@@ -8,14 +8,14 @@
 	{#each experiences as exp}
 		<li class="flex items-center sm:my-2 my-4">
 			<div class="flex flex-col sm:flex-row">
-				<div class="w-24 sm:mr-20 text-secondary">
+				<div class="w-24 sm:mr-20 text-secondary dark:text-secondary-dark">
 					<time datetime={exp.start}>{new Date(exp.start).getFullYear()}</time>
 					-
 					<time datetime={exp.end}
 						>{exp.currentPosition || !exp.end ? ' Now' : new Date(exp.end).getFullYear()}</time
 					>
 				</div>
-				<span class="text-foreground">{exp.title}</span>
+				<span class="text-primary dark:text-primary-dark">{exp.title}</span>
 			</div>
 		</li>
 	{/each}

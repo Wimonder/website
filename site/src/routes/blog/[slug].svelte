@@ -16,10 +16,12 @@
 </svelte:head>
 
 <article class="m-auto flex w-full max-w-2xl flex-col">
-	<h1 class="mb-4 text-4xl font-bold text-foreground-accent">{post.title}</h1>
+	<h1 class="mb-4 text-4xl font-bold text-accent dark:text-accent-dark">{post.title}</h1>
 	<Divider />
 	<div class="mt-2 mb-4">
-		<p class="text-secondary">{publishedAtDateString} · {post.estimatedReadingTime} min read</p>
+		<p class="text-secondary dark:text-secondary-dark">
+			{publishedAtDateString} · {post.estimatedReadingTime} min read
+		</p>
 	</div>
 	<CustomPortableText blocks={post.content} />
 </article>

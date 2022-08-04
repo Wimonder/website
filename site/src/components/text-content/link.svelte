@@ -13,7 +13,7 @@
 </script>
 
 {#if value.href}
-	<div class="text-blue-800 no-underline not-prose inline hover:underline">
+	<div class="text-blue-800 no-underline not-prose hover:underline">
 		<Link url={value.href} external={newWindow}>
 			<slot />
 		</Link>

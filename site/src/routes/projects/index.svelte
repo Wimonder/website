@@ -5,8 +5,8 @@
 	export let projects: Project[] = [];
 </script>
 
-<section>
-	<h1 class="text-4xl font-bold text-primary-9">Projects</h1>
+<section class="text-primary dark:text-primary-dark">
+	<h1 class="text-4xl font-bold text-accent dark:text-accent-dark">Projects</h1>
 	<p class="my-4">
 		In my free time I enjoy tinkering with all kinds of software and hardware. Here you can find my
 		latest projects.

@@ -44,14 +44,19 @@
 
 <section class="mt-4 flex">
 	<div class="pr-5">
-		<h1 class="mb-2 text-4xl font-bold">
-			<span class="text-soft mr-1 absolute -translate-x-full sm:inline-block hidden">~$</span>{name}
+		<h1 class="mb-2 text-4xl font-bold text-accent dark:text-accent-dark">
+			<span
+				class="text-soft dark:text-soft-dark mr-1 absolute -translate-x-full sm:inline-block hidden"
+				>~$</span
+			>{name}
 		</h1>
 		<byline><TextContent blocks={short} /></byline>
 		<div class="space-x-4">
 			{#each iconLinks as iconLink}
 				<Link url={iconLink.link}>
-					<i aria-hidden="true" class="text-soft mt-3 w-6 h-6 hover:text-primary"
+					<i
+						aria-hidden="true"
+						class="inline-flex text-soft dark:text-soft-dark mt-3 w-6 h-6 hover:text-primary dark:hover:text-primary-dark"
 						>{@html iconLink.icon}</i
 					><span class="sr-only">{iconLink.text}</span>
 				</Link>
@@ -61,6 +66,8 @@
 	<div>
 		<img
 			src="profile-picture-500x500.webp"
+			width="500px"
+			height="500px"
 			alt="Wim's profile"
 			class="rounded-3xl sm:block hidden"
 		/>
