@@ -2,6 +2,9 @@
 	import type { Experience } from '$api/experiences';
 
 	export let experiences: Experience[] = [];
+	experiences = experiences.sort(
+		(ex1, ex2) => new Date(ex2.start).getTime() - new Date(ex1.start).getTime()
+	);
 </script>
 
 <ul class="mt-3">
