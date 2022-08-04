@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { spring } from 'svelte/motion';
 
-	export let isDark = true;
+	export let isDark: boolean;
 
 	const properties = {
 		light: {
@@ -31,6 +31,10 @@
 	const radiusSpring = spring(isDark ? properties.dark.r : properties.light.r, springOptions);
 	const cxSpring = spring(isDark ? properties.dark.cx : properties.light.cx, springOptions);
 	const cySpring = spring(isDark ? properties.dark.cy : properties.light.cy, springOptions);
+	const rotateSpring = spring(
+		isDark ? properties.dark.transform : properties.light.transform,
+		springOptions
+	);
 
 	$: {
 		fadeSpring.set(isDark ? properties.dark.opacity : properties.light.opacity);
@@ -50,7 +54,7 @@
 	stroke-width="2"
 	stroke-linecap="round"
 	stroke-linejoin="round"
-	transform={`rotate(${isDark ? properties.dark.transform : properties.light.transform})`}
+	transform={`rotate(${$rotateSpring})`}
 >
 	<mask id="mask">
 		<rect x="0" y="0" width="100%" height="100%" fill="white" />
