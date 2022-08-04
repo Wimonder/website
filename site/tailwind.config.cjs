@@ -4,11 +4,13 @@ const colors = {
 	accent: 'rgb(17 24 39)',
 	secondary: 'rgb(75 85 99)',
 	soft: 'rgb(156 163 175)',
+	link: 'rgb(30 64 175)',
 	'background-dark': 'rgb(17 24 39)',
 	'primary-dark': 'rgb(243 244 246)',
 	'accent-dark': 'rgb(243 244 246)',
 	'secondary-dark': 'rgb(156 163 175)',
-	'soft-dark': 'rgb(209 213 219)'
+	'soft-dark': 'rgb(209 213 219)',
+	'link-dark': 'rgb(96 165 250)'
 };
 
 /** @type {import('tailwindcss').Config} */

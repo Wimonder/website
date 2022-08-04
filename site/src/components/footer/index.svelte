@@ -66,6 +66,8 @@
 		Made by Wim Onderbeke with <i aria-hidden="true" class="text-red-600 inline-block w-5 h-5"
 			>{@html heartIcon.icon}</i
 		><span class="sr-only">{heartIcon.text}</span>, find this website on
-		<a class="hover:underline text-blue-800" href={websiteGithub} target="_blank">GitHub</a>
+		<a class="hover:underline text-link dark:text-link-dark" href={websiteGithub} target="_blank"
+			>GitHub</a
+		>
 	</p>
 </footer>

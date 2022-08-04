@@ -13,7 +13,7 @@
 
 {#if value.href}
 	<a
-		class="text-blue-800 no-underline hover:underline font-normal"
+		class="text-link dark:text-link-dark no-underline hover:underline font-normal"
 		href={value.href}
 		target={newWindow ? '_blank' : undefined}><slot /></a
 	>
