@@ -18,12 +18,6 @@
 			list: List,
 			marks: {
 				link: Link
-				// link: {
-				// 	component: 'Link',
-				// 	props: {
-				// 		url: 'url'
-				// 	}
-				// }
 			}
 		}}
 	/>
