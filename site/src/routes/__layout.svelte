@@ -1,10 +1,23 @@
+<script context="module" lang="ts">
+	export async function load({ fetch }: LoadEvent) {
+		const layoutData = await fetch('/data').then((res) => res.json());
+		return {
+			props: {
+				layoutData
+			}
+		};
+	}
+</script>
+
 <script lang="ts">
 	import Footer from '$components/footer/index.svelte';
 	import Header from '$components/header/header.svelte';
+	import type { LoadEvent } from '@sveltejs/kit';
 	import '../app.css';
+	import type { LayoutData } from './data';
 
-	const resumeUrl =
-		'https://cdn.sanity.io/files/oh3ilzqv/production/3d92dcdafdd70830426fe1d83fe671e9666712aa.pdf';
+	export let layoutData: LayoutData;
+	$: resumeUrl = layoutData.resumeUrl;
 </script>
 
 <Header resume={resumeUrl} />
