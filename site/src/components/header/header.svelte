@@ -5,6 +5,8 @@
 	import HeaderLink from './header-link.svelte';
 	import ThemeToggler from './theme-toggler.svelte';
 
+	export let resume: string;
+
 	const routes = [
 		{
 			link: '/',
@@ -19,7 +21,7 @@
 			text: 'Blog'
 		},
 		{
-			link: 'https://cdn.sanity.io/files/oh3ilzqv/production/877b4fbee9050de319f09c71beb68710a3974d81.pdf',
+			link: resume,
 			text: 'Resume'
 		}
 	];

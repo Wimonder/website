@@ -9,6 +9,7 @@ interface WhoamiData {
 		email: string;
 		short: InputValue;
 		about: InputValue;
+		resumeUrl: string;
 	};
 }
 
@@ -17,7 +18,8 @@ const whoamiQuery = groq`{
 		name,
 		email,
         short,
-        about
+        about,
+		"resumeUrl": resume.asset->url
 	}[0],
 }`;
 

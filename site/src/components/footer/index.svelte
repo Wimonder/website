@@ -2,6 +2,8 @@
 	import feather from 'feather-icons';
 	import FooterHolder from './footer-holder.svelte';
 
+	export let resume: string;
+
 	const heartIcon = {
 		icon: feather.icons.heart.toSvg({
 			width: '20px',
@@ -25,7 +27,7 @@
 			text: 'Blog'
 		},
 		{
-			link: 'https://cdn.sanity.io/files/oh3ilzqv/production/877b4fbee9050de319f09c71beb68710a3974d81.pdf',
+			link: resume,
 			text: 'Resume'
 		}
 	];
