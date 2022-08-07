@@ -22,11 +22,11 @@
 
 	const springOptions = {
 		stiffness: 0.2,
-		damping: 0.2
+		damping: 0.3
 	};
 	const fadeSpring = spring(isDark ? properties.dark.opacity : properties.light.opacity, {
-		stiffness: 0.5,
-		damping: 0.8
+		stiffness: 0.9,
+		damping: 1
 	});
 	const radiusSpring = spring(isDark ? properties.dark.r : properties.light.r, springOptions);
 	const cxSpring = spring(isDark ? properties.dark.cx : properties.light.cx, springOptions);
@@ -41,6 +41,7 @@
 		radiusSpring.set(isDark ? properties.dark.r : properties.light.r);
 		cxSpring.set(isDark ? properties.dark.cx : properties.light.cx);
 		cySpring.set(isDark ? properties.dark.cy : properties.light.cy);
+		rotateSpring.set(isDark ? properties.dark.transform : properties.light.transform);
 	}
 </script>
 
