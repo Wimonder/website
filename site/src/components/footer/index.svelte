@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { routes } from '$lib/constants';
 	import feather from 'feather-icons';
 	import FooterHolder from './footer-holder.svelte';
 
@@ -13,24 +14,7 @@
 		text: 'love'
 	};
 
-	const routes = [
-		{
-			link: '/',
-			text: 'Home'
-		},
-		{
-			link: '/projects',
-			text: 'Projects'
-		},
-		{
-			link: '/blog',
-			text: 'Blog'
-		},
-		{
-			link: resume,
-			text: 'Resume'
-		}
-	];
+	const routeLinks = routes(resume);
 
 	const projects = [
 		{
@@ -54,7 +38,7 @@
 		}
 	];
 
-	const allRoutes = [routes, projects, socials];
+	const allRoutes = [routeLinks, projects, socials];
 	const websiteGithub = 'https://github.com/Wimonder/mywebsite';
 </script>
 
