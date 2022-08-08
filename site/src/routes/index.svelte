@@ -5,6 +5,7 @@
 	import Education from '$components/education/index.svelte';
 	import Experiences from '$components/experiences/index.svelte';
 	import Head from '$components/head/index.svelte';
+	import Link from '$components/link.svelte';
 	import LatestPosts from '$components/posts/posts.svelte';
 	import Section from '$components/section.svelte';
 	import TextContent from '$components/text-content/index.svelte';
@@ -52,13 +53,13 @@
 		<byline><TextContent blocks={short} /></byline>
 		<div class="space-x-4">
 			{#each iconLinks as iconLink}
-				<a href={iconLink.link} target="_blank">
+				<Link href={iconLink.link} external={true}>
 					<i
 						aria-hidden="true"
 						class="inline-flex text-soft dark:text-soft-dark mt-3 w-6 h-6 hover:text-primary dark:hover:text-primary-dark"
 						>{@html iconLink.icon}</i
 					><span class="sr-only">{iconLink.text}</span>
-				</a>
+				</Link>
 			{/each}
 		</div>
 	</div>
@@ -76,7 +77,7 @@
 <Section name="Latest posts">
 	<LatestPosts {posts} />
 	<div class="mt-4">
-		<a href="/blog">Read all posts<i>-></i></a>
+		<Link href="/blog" external={false}>Read all posts<i>-></i></Link>
 	</div>
 </Section>
 

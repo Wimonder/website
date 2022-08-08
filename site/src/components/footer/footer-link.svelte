@@ -1,12 +1,12 @@
 <script lang="ts">
-	export let url: string;
-	export let newPage: boolean = true;
+	import Link from '$components/link.svelte';
+
+	export let href: string;
+	export let external: boolean = true;
 </script>
 
-<a
-	class="inline-flex text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
-	href={url}
-	target={newPage ? '_blank' : '_self'}
+<Link
+	styles="inline-flex text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
+	{href}
+	{external}><slot /></Link
 >
-	<slot />
-</a>

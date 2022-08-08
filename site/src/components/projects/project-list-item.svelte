@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Project } from '$api/projects';
+	import Link from '$components/link.svelte';
 	import TextContent from '$components/text-content/index.svelte';
 	import { getImageUrl } from '$lib/sanity';
 	export let project: Project;
@@ -11,12 +12,12 @@
 	<article class="text-primary dark:text-primary-dark">
 		<h3 class="text-2xl text-inherit font-bold">{title}</h3>
 		<p>
-			<a class="text-link dark:text-link-dark hover:underline" href={link} target="_blank"
-				>Preview</a
+			<Link styles="text-link dark:text-link-dark hover:underline" href={link} external={true}
+				>Preview</Link
 			>
 			·
-			<a class="text-link dark:text-link-dark hover:underline" href={github} target="_blank"
-				>GitHub</a
+			<Link styles="text-link dark:text-link-dark hover:underline" href={github} external={true}
+				>GitHub</Link
 			>
 		</p>
 		<div class="mt-2">

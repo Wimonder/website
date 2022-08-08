@@ -56,17 +56,23 @@
 	{#if currentTheme}
 		<ThemeIcon isDark={currentTheme === THEMES.DARK} />
 	{:else}
-		<script type="ts">
+		<script>
+			const STORAGE_KEY = 'theme';
+			const DARK_PREFERENCE = '(prefers-color-scheme: dark)';
+			const THEMES = {
+				DARK: 'dark',
+				LIGHT: 'light'
+			};
+			const prefersDarkThemes = () => window.matchMedia(DARK_PREFERENCE).matches;
+
 			if (document) {
-				const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-					? 'dark'
-					: 'light';
-				currentTheme = localStorage.getItem('theme') ?? preferredTheme;
-				let icon: string;
-				if (currentTheme === 'dark') {
-					document.documentElement.classList.remove('light');
-					document.documentElement.classList.add('dark');
-					icon = `
+				const preferredTheme = prefersDarkThemes() ? THEMES.DARK : THEMES.LIGHT;
+				currentTheme = localStorage.getItem(STORAGE_KEY) ?? preferredTheme;
+
+				if (currentTheme === THEMES.DARK) {
+					document.documentElement.classList.remove(THEMES.LIGHT);
+					document.documentElement.classList.add(THEMES.DARK);
+					const darkIcon = `
 						<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -96,10 +102,11 @@
 						</g>
 						</svg>
 					`;
+					document.getElementById('theme-toggler').innerHTML = darkIcon;
 				} else {
-					document.documentElement.classList.remove('dark');
-					document.documentElement.classList.add('light');
-					icon = `
+					document.documentElement.classList.remove(THEMES.DARK);
+					document.documentElement.classList.add(THEMES.LIGHT);
+					const lightIcon = `
 						<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -119,8 +126,8 @@
 						<circle fill="currentColor" cx="12" cy="12" r="9" mask="url(#mask)" />
 						</svg>
 					`;
+					document.getElementById('theme-toggler').innerHTML = lightIcon;
 				}
-				document.getElementById('theme-toggler').innerHTML = icon;
 			}
 		</script>
 	{/if}

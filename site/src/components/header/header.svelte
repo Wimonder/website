@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Link from '$components/link.svelte';
 	import Dropdown from './dropdown.svelte';
 
 	import { routes } from '$lib/constants';
@@ -30,11 +31,9 @@
 			</ul>
 		</div>
 		<div class="flex justify-center">
-			<a
-				class="pt-3 flex cursor-pointer rounded-sm p-2 text-secondary dark:text-secondary-dark hover:bg-gray-100 dark:hover:bg-gray-800"
-				width="24px"
-				height="20px"
-				href="/rss.xml">{@html rssIcon}</a
+			<Link
+				styles="pt-3 flex cursor-pointer rounded-sm p-2 text-secondary dark:text-secondary-dark hover:bg-gray-100 dark:hover:bg-gray-800"
+				href="/rss.xml">{@html rssIcon}</Link
 			>
 			<ThemeToggler />
 		</div>

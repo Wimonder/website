@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Link from '$components/link.svelte';
 	import type { MarkComponentProps } from '@portabletext/svelte';
 
 	// export let portableText: MarkComponentProps<{ url: string }>;
@@ -12,10 +13,10 @@
 </script>
 
 {#if value.href}
-	<a
-		class="text-link dark:text-link-dark no-underline hover:underline font-normal"
+	<Link
+		styles="text-link dark:text-link-dark no-underline hover:underline font-normal"
 		href={value.href}
-		target={newWindow ? '_blank' : undefined}><slot /></a
+		external={newWindow}><slot /></Link
 	>
 {:else}
 	<slot />
