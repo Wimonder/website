@@ -1,4 +1,5 @@
 import { sanityClient } from '$lib/sanity';
+import type { PortableText } from '@portabletext/svelte';
 import groq from 'groq';
 
 export interface PreviewPost {
@@ -9,6 +10,7 @@ export interface PreviewPost {
 	slug: string;
 	estimatedReadingTime: number;
 	shortContent: string;
+	content: PortableText;
 }
 
 const PostsQuery = groq`
@@ -19,7 +21,8 @@ const PostsQuery = groq`
 			title,
 			"slug": slug.current,
             "estimatedReadingTime": round(length(pt::text(content)) / 5 / 180 ),
-            shortContent
+            shortContent,
+			content
 		}`;
 
 export const fetchPosts = async () => sanityClient.fetch<PreviewPost[]>(PostsQuery);
