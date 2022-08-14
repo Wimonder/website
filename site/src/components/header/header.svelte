@@ -33,8 +33,10 @@
 		<div class="flex justify-center">
 			<Link
 				styles="pt-3 flex cursor-pointer rounded-sm p-2 text-secondary dark:text-secondary-dark hover:bg-gray-100 dark:hover:bg-gray-800"
-				href="/rss.xml">{@html rssIcon}</Link
+				href="/rss.xml"
 			>
+				<i aria-hidden="true">{@html rssIcon}</i><span class="sr-only">RSS Feed</span>
+			</Link>
 			<ThemeToggler />
 		</div>
 	</div>
