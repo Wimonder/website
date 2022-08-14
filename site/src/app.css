@@ -132,12 +132,6 @@ html {
 		sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-@layer components {
-	* {
-		@apply transition duration-300;
-	}
-}
-
 #svelte {
-	@apply flex h-full min-h-screen w-full flex-col bg-background dark:bg-background-dark text-primary dark:text-primary-dark transition duration-300;
+	@apply flex h-full min-h-screen w-full flex-col bg-background dark:bg-background-dark text-primary dark:text-primary-dark;
 }
