@@ -31,7 +31,7 @@
 	];
 
 	export let name: string;
-	export let email: string;
+	// export let email: string;
 	export let short: InputValue;
 	export let about: InputValue;
 
