@@ -25,6 +25,6 @@
 	},
 	"devDependencies": {
 		"@sanity/cli": "^3.0.0-dev-preview.11",
-		"vite": "^2.9.13"
+		"vite": "^3.0.7"
 	}
 }
