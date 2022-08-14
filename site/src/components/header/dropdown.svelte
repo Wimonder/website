@@ -23,7 +23,7 @@
 {#if open}
 	<aside class="absolute h-screen w-full">
 		<nav
-			class="mt-20 flex h-full flex-col bg-background dark:bg-background-dark px-8 pb-2 transition duration-300 ease-in-out"
+			class="mt-16 flex h-full flex-col bg-background dark:bg-background-dark px-8 pb-2 transition duration-300 ease-in-out"
 		>
 			{#each routes as route, i}
 				<a

@@ -42,7 +42,7 @@
 
 <Head title="Wim Onderbeke" meta="Wim's personal website" />
 
-<section class="mt-4 flex">
+<section class="flex">
 	<div class="pr-5">
 		<h1 class="mb-2 text-4xl font-bold text-accent dark:text-accent-dark">
 			<span
