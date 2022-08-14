@@ -10,9 +10,7 @@ const config = {
 	}),
 
 	kit: {
-		adapter: vercel({
-			edge: true
-		}),
+		adapter: vercel(),
 		prerender: {
 			default: true
 		},
