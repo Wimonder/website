@@ -9,6 +9,7 @@
 	import LatestPosts from '$components/posts/posts.svelte';
 	import Section from '$components/section.svelte';
 	import TextContent from '$components/text-content/index.svelte';
+	import { toggleSearchMenu } from '$lib/stores/search';
 	import type { InputValue } from '@portabletext/svelte/ptTypes';
 	import feather from 'feather-icons';
 
@@ -51,7 +52,16 @@
 			>{name}
 		</h1>
 		<byline><TextContent blocks={short} /></byline>
-		<div class="space-x-4">
+		<br />
+		<p>
+			Tip: Use <button
+				on:click|preventDefault={toggleSearchMenu}
+				class="border border-primary dark:border-primary-dark hover:bg-primary
+				dark:hover:bg-primary-dark rounded-md hover:text-primary-dark dark:hover:text-primary px-1
+				text-sm"><span class="font-semibold">CTRL</span> K</button
+			> to quickly search through this site.
+		</p>
+		<div class="mt-2 space-x-4">
 			{#each iconLinks as iconLink}
 				<Link href={iconLink.link} external={true}>
 					<i

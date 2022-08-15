@@ -18,7 +18,7 @@
 	let open: boolean = false;
 </script>
 
-<nav class="z-20 flex sm:h-16 h-12 w-full text-primary dark:text-primary-dark">
+<nav class="z-10 flex sm:h-16 h-12 w-full text-primary dark:text-primary-dark">
 	<div class="m-auto flex w-full max-w-4xl justify-between px-4">
 		<div class="sm:hidden flex items-center">
 			<Hamburger bind:open />
