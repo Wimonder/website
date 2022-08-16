@@ -5,7 +5,7 @@
 </script>
 
 {#if external}
-	<a class={styles} {href} target="_blank"><slot /></a>
+	<a class={styles} {href} target="_blank" on:click><slot /></a>
 {:else}
-	<a class={styles} sveltekit:prefetch {href}><slot /></a>
+	<a class={styles} sveltekit:prefetch {href} on:click><slot /></a>
 {/if}

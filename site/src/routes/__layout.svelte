@@ -26,4 +26,4 @@
 	<slot />
 </main>
 <Footer resume={resumeUrl} />
-<SearchMenu />
+<SearchMenu {resumeUrl} blogPosts={layoutData.posts} />
