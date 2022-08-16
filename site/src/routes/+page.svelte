@@ -37,7 +37,7 @@
 	<div class="pr-5">
 		<h1 class="mb-2 text-4xl font-bold text-accent dark:text-accent-dark">
 			<span
-				class="text-soft dark:text-soft-dark mr-1 absolute -translate-x-full sm:inline-block hidden"
+				class="text-soft dark:text-soft-dark mr-1 absolute -translate-x-full lg:inline-block hidden"
 				>~$</span
 			>{data.name}
 		</h1>

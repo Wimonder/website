@@ -169,8 +169,7 @@
 	<div
 		class="absolute rounded-xl px-3 pb-3 flex flex-col
 		dark:shadow-[0_0px_150px_40px_rgba(250,250,250,0.15)] shadow-[0_0px_150px_40px_rgba(0,0,0,0.3)]
-		top-1/4 left-1/2 -translate-x-1/2  max-w-3xl w-full z-30 bg-background dark:bg-background-dark
-		"
+		top-1/4 left-1/2 -translate-x-1/2 w-4/5 lg:max-w-3xl lg:w-full z-30 bg-background dark:bg-background-dark"
 	>
 		<div class="flex items-start">
 			<input
