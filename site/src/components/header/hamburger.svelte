@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let open: boolean = false;
+	export let open = false;
 </script>
 
 <button class:open on:click={() => (open = !open)} aria-label="Hamburger">

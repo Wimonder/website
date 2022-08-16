@@ -3,7 +3,7 @@
 	import Link from '$components/link.svelte';
 
 	export let href: string;
-	export let external: boolean = false;
+	export let external = false;
 
 	$: isActive = $page.routeId ? href.includes($page.routeId.split('/')[0]) : href === '/';
 </script>

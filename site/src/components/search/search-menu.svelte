@@ -65,38 +65,36 @@
 		}
 	};
 
-	const fzFinder = new Map(
-		Object.entries({
-			projects: (searchString: string): ProjectResult[] => {
-				return new Fuse<ProjectResult>(categories.projects.data, {
-					keys: ['name', 'text']
-				})
-					.search(searchString)
-					.map(({ item }) => item);
-			},
-			blog: (searchString: string): PostResult[] => {
-				return new Fuse<PostResult>(categories.blog.data, {
-					keys: ['title', 'shortContent']
-				})
-					.search(searchString)
-					.map(({ item }) => item);
-			},
-			navigation: (searchString: string): NavigationResult[] => {
-				return new Fuse<NavigationResult>(categories.navigation.data, {
-					keys: ['text']
-				})
-					.search(searchString)
-					.map(({ item }) => item);
-			},
-			socials: (searchString: string): SocialResult[] => {
-				return new Fuse<SocialResult>(categories.socials.data, {
-					keys: ['text']
-				})
-					.search(searchString)
-					.map(({ item }) => item);
-			}
-		})
-	);
+	const fzFinder = {
+		projects: (searchString: string): ProjectResult[] => {
+			return new Fuse<ProjectResult>(categories.projects.data, {
+				keys: ['name', 'text']
+			})
+				.search(searchString)
+				.map(({ item }) => item);
+		},
+		blog: (searchString: string): PostResult[] => {
+			return new Fuse<PostResult>(categories.blog.data, {
+				keys: ['title', 'shortContent']
+			})
+				.search(searchString)
+				.map(({ item }) => item);
+		},
+		navigation: (searchString: string): NavigationResult[] => {
+			return new Fuse<NavigationResult>(categories.navigation.data, {
+				keys: ['text']
+			})
+				.search(searchString)
+				.map(({ item }) => item);
+		},
+		socials: (searchString: string): SocialResult[] => {
+			return new Fuse<SocialResult>(categories.socials.data, {
+				keys: ['text']
+			})
+				.search(searchString)
+				.map(({ item }) => item);
+		}
+	};
 
 	let searchResults:
 		| { type: 'one'; hasResults: boolean; results: SearchResult[] }
@@ -107,7 +105,7 @@
 		  };
 	$: {
 		if (searchCategory === null) {
-			const results = Array.from(fzFinder.entries()).map(([key, finder]) => {
+			const results = Object.entries(fzFinder).map(([key, finder]) => {
 				return { category: key, results: finder(searchValue || '') };
 			});
 			searchResults = {
@@ -123,7 +121,7 @@
 					results: categories[searchCategory].data
 				};
 			} else {
-				let tempResults = fzFinder.get(searchCategory)!(searchValue);
+				let tempResults = fzFinder[searchCategory](searchValue);
 				searchResults = {
 					type: 'one',
 					hasResults: !!tempResults.length,

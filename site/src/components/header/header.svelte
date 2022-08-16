@@ -15,7 +15,7 @@
 		width: '20px',
 		height: '20px'
 	});
-	let open: boolean = false;
+	let open = false;
 </script>
 
 <nav class="z-10 flex sm:h-16 h-12 w-full text-primary dark:text-primary-dark">

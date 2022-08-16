@@ -2,7 +2,7 @@
 	import Link from '$components/link.svelte';
 
 	export let href: string;
-	export let external: boolean = true;
+	export let external = true;
 </script>
 
 <Link

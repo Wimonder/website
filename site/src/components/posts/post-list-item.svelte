@@ -2,7 +2,7 @@
 	import type { PreviewPost } from '$api/posts';
 	export let post: PreviewPost;
 
-	const { estimatedReadingTime, title, _createdAt, shortContent, publishedAt } = post;
+	const { estimatedReadingTime, title, shortContent, publishedAt } = post;
 	const publishedAtDateString = new Date(publishedAt).toLocaleDateString(undefined, {
 		year: 'numeric',
 		month: 'long',
