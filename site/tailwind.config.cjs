@@ -1,11 +1,13 @@
 const colors = {
 	background: 'rgb(249 250 251)',
+	'background-soft': 'rgb(243 244 246)',
 	primary: 'rgb(17 24 39)',
 	accent: 'rgb(17 24 39)',
 	secondary: 'rgb(75 85 99)',
 	soft: 'rgb(156 163 175)',
 	link: 'rgb(30 64 175)',
 	'background-dark': 'rgb(17 24 39)',
+	'background-soft-dark': 'rgb(156 163 175)',
 	'primary-dark': 'rgb(243 244 246)',
 	'accent-dark': 'rgb(243 244 246)',
 	'secondary-dark': 'rgb(156 163 175)',

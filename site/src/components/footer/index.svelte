@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Link from '$components/link.svelte';
-	import { routes } from '$lib/constants';
+	import { projects, routes, socials } from '$lib/constants';
 	import feather from 'feather-icons';
 	import FooterHolder from './footer-holder.svelte';
 
@@ -16,28 +16,6 @@
 	};
 
 	const routeLinks = routes(resume);
-
-	const projects = [
-		{
-			link: 'https://linky.wimon.dev',
-			text: 'URL Shortener'
-		}
-	];
-
-	const socials = [
-		{
-			link: 'https://github.com/Wimonder',
-			text: 'GitHub'
-		},
-		{
-			link: 'https://www.linkedin.com/in/wim-onderbeke-344296163/',
-			text: 'LinkedIn'
-		},
-		{
-			link: 'https://twitter.com/wimon_dev',
-			text: 'Twitter'
-		}
-	];
 
 	const allRoutes = [routeLinks, projects, socials];
 	const websiteGithub = 'https://github.com/Wimonder/mywebsite';

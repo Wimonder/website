@@ -12,6 +12,7 @@
 <script lang="ts">
 	import Footer from '$components/footer/index.svelte';
 	import Header from '$components/header/header.svelte';
+	import SearchMenu from '$components/search/search-menu.svelte';
 	import type { LoadEvent } from '@sveltejs/kit';
 	import '../app.css';
 	import type { LayoutData } from './data';
@@ -25,3 +26,4 @@
 	<slot />
 </main>
 <Footer resume={resumeUrl} />
+<SearchMenu {resumeUrl} blogPosts={layoutData.posts} />
