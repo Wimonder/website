@@ -1,17 +1,14 @@
 import type { Project } from '$api/projects';
 import { fetchProjects } from '$api/projects';
-import type { RequestHandler } from './__types';
+import type { PageServerLoad } from './$types';
 
 interface ProjectsProps {
 	projects: Project[];
 }
 
-export const GET: RequestHandler<ProjectsProps> = async () => {
+export const load: PageServerLoad<ProjectsProps> = async () => {
 	const projects = await fetchProjects();
 	return {
-		body: {
-			projects
-		},
-		status: 200
+		projects
 	};
 };

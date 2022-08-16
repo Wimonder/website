@@ -1,7 +1,8 @@
+import { json } from '@sveltejs/kit';
 import type { PreviewPost } from '$api/posts';
 import { fetchPosts } from '$api/posts';
 import { fetchWhoamiData } from '$api/whoami';
-import type { RequestHandler } from './__types';
+import type { RequestHandler } from '../$types';
 
 export interface LayoutData {
 	resumeUrl: string;
@@ -11,11 +12,8 @@ export interface LayoutData {
 export const GET: RequestHandler<LayoutData> = async () => {
 	const whoamiData = await fetchWhoamiData();
 	const posts = await fetchPosts();
-	return {
-		body: {
-			...whoamiData.whoami,
-			posts
-		},
-		status: 200
-	};
+	return json({
+		...whoamiData.whoami,
+		posts
+	});
 };

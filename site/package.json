@@ -45,6 +45,7 @@
 		"feather-icons": "^4.29.0",
 		"groq": "^2.29.3",
 		"prism-svelte": "^0.5.0",
-		"prismjs": "^1.28.0"
+		"prismjs": "^1.28.0",
+		"fuse.js": "^6.6.2"
 	}
 }

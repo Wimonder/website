@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { Project } from '$api/projects';
 	import Projects from '$components/projects/projects.svelte';
+	import type { PageData } from './$types';
 
-	export let projects: Project[] = [];
+	export let data: PageData;
 </script>
 
 <section class="text-primary dark:text-primary-dark">
@@ -12,6 +12,6 @@
 		latest projects.
 	</p>
 	<section>
-		<Projects {projects} />
+		<Projects projects={data.projects} />
 	</section>
 </section>

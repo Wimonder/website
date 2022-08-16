@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { PreviewPost } from '$api/posts';
 	import LatestPosts from '$components/posts/posts.svelte';
 	import Section from '$components/section.svelte';
+	import type { PageData } from './$types';
 
-	export let posts: PreviewPost[] = [];
+	export let data: PageData;
 </script>
 
 <section class="text-primary dark:text-primary-dark">
@@ -13,6 +13,6 @@
 		find content ranging from cloud, microservices, developer productivity to UI/UX design.
 	</p>
 	<Section name="Posts">
-		<LatestPosts {posts} />
+		<LatestPosts posts={data.posts} />
 	</Section>
 </section>

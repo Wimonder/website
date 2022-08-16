@@ -1,24 +1,12 @@
-<script context="module" lang="ts">
-	export async function load({ fetch }: LoadEvent) {
-		const layoutData = await fetch('/data').then((res) => res.json());
-		return {
-			props: {
-				layoutData
-			}
-		};
-	}
-</script>
-
 <script lang="ts">
 	import Footer from '$components/footer/index.svelte';
 	import Header from '$components/header/header.svelte';
 	import SearchMenu from '$components/search/search-menu.svelte';
-	import type { LoadEvent } from '@sveltejs/kit';
 	import '../app.css';
-	import type { LayoutData } from './data';
+	import type { LayoutData } from './$types';
 
-	export let layoutData: LayoutData;
-	$: resumeUrl = layoutData.resumeUrl;
+	export let data: LayoutData;
+	$: resumeUrl = data.layoutData.resumeUrl;
 </script>
 
 <Header resume={resumeUrl} />
@@ -26,4 +14,4 @@
 	<slot />
 </main>
 <Footer resume={resumeUrl} />
-<SearchMenu {resumeUrl} blogPosts={layoutData.posts} />
+<SearchMenu {resumeUrl} blogPosts={data.layoutData.posts} />

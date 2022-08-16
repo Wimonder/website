@@ -1,7 +1,4 @@
 <script lang="ts">
-	import type { Education as EducationType } from '$api/education';
-	import type { Experience } from '$api/experiences';
-	import type { PreviewPost } from '$api/posts';
 	import Education from '$components/education/index.svelte';
 	import Experiences from '$components/experiences/index.svelte';
 	import Head from '$components/head/index.svelte';
@@ -10,8 +7,8 @@
 	import Section from '$components/section.svelte';
 	import TextContent from '$components/text-content/index.svelte';
 	import { toggleSearchMenu } from '$lib/stores/search';
-	import type { InputValue } from '@portabletext/svelte/ptTypes';
 	import feather from 'feather-icons';
+	import type { PageData } from './$types';
 
 	const iconLinks = [
 		{
@@ -31,14 +28,7 @@
 		}
 	];
 
-	export let name: string;
-	// export let email: string;
-	export let short: InputValue;
-	export let about: InputValue;
-
-	export let posts: PreviewPost[];
-	export let experiences: Experience[];
-	export let education: EducationType[];
+	export let data: PageData;
 </script>
 
 <Head title="Wim Onderbeke" meta="Wim's personal website" />
@@ -49,9 +39,9 @@
 			<span
 				class="text-soft dark:text-soft-dark mr-1 absolute -translate-x-full sm:inline-block hidden"
 				>~$</span
-			>{name}
+			>{data.name}
 		</h1>
-		<byline><TextContent blocks={short} /></byline>
+		<byline><TextContent blocks={data.short} /></byline>
 		<br />
 		<p>
 			Tip: Use <button
@@ -83,18 +73,18 @@
 		/>
 	</div>
 </section>
-<Section name="About me"><TextContent blocks={about} /></Section>
+<Section name="About me"><TextContent blocks={data.about} /></Section>
 <Section name="Latest posts">
-	<LatestPosts {posts} />
+	<LatestPosts posts={data.posts} />
 	<div class="mt-4">
 		<Link href="/blog" external={false}>Read all posts<i>-></i></Link>
 	</div>
 </Section>
 
 <Section name="Experience">
-	<Experiences {experiences} />
+	<Experiences experiences={data.experiences} />
 </Section>
 
 <Section name="Education">
-	<Education {education} />
+	<Education education={data.education} />
 </Section>

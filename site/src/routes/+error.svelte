@@ -1,21 +1,10 @@
-<script context="module" lang="ts">
-	export async function load({ error, status }: LoadEvent) {
-		return {
-			props: {
-				status
-			}
-		};
-	}
-</script>
-
 <script lang="ts">
+	import { page } from '$app/stores';
 	import Error from '$components/error.svelte';
-
-	export let status: number;
 </script>
 
 <div class="flex flex-col text-center justify-center sm:h-80">
-	{#if status == 404}
+	{#if $page.status == 404}
 		<!-- Use '==' instead of '===' to match string/number status code (just to be sure) -->
 		<Error
 			title="Page not found"

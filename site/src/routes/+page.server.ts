@@ -6,7 +6,7 @@ import type { PreviewPost } from '$api/posts';
 import { fetchPosts } from '$api/posts';
 import { fetchWhoamiData } from '$api/whoami';
 import type { InputValue } from '@portabletext/svelte/ptTypes';
-import type { RequestHandler } from './__types';
+import type { PageServerLoad } from './$types';
 
 interface IndexProps {
 	name: string;
@@ -18,7 +18,7 @@ interface IndexProps {
 	posts: PreviewPost[];
 }
 
-export const GET: RequestHandler<IndexProps> = async () => {
+export const load: PageServerLoad<IndexProps> = async () => {
 	const [whoamiData, experiences, education, posts] = await Promise.all([
 		fetchWhoamiData(),
 		fetchExperiences(),
@@ -26,12 +26,9 @@ export const GET: RequestHandler<IndexProps> = async () => {
 		fetchPosts()
 	]);
 	return {
-		body: {
-			...whoamiData.whoami,
-			experiences,
-			education,
-			posts
-		},
-		status: 200
+		...whoamiData.whoami,
+		experiences,
+		education,
+		posts
 	};
 };
