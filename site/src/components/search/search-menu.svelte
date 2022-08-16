@@ -167,7 +167,10 @@
 {#if $searchMenuOpen}
 	<div class="absolute h-screen w-full z-20 bg-background/50 dark:bg-background-dark/50" />
 	<div
-		class="absolute rounded-xl px-3 pb-3 flex flex-col dark:shadow-[0_0px_150px_40px_rgba(250,250,250,0.15)] shadow-[0_0px_150px_40px_rgba(0,0,0,0.3)] top-1/4 left-1/2 -translate-x-1/2  max-w-3xl w-full z-30 bg-background dark:bg-background-dark"
+		class="absolute rounded-xl px-3 pb-3 flex flex-col
+		dark:shadow-[0_0px_150px_40px_rgba(250,250,250,0.15)] shadow-[0_0px_150px_40px_rgba(0,0,0,0.3)]
+		top-1/4 left-1/2 -translate-x-1/2  max-w-3xl w-full z-30 bg-background dark:bg-background-dark
+		"
 	>
 		<div class="flex items-start">
 			<input
@@ -180,7 +183,7 @@
 			</button>
 		</div>
 		<Divider />
-		<div class="text-secondary dark:text-secondary-dark">
+		<div class="text-secondary dark:text-secondary-dark overflow-y-scroll max-h-96">
 			{#if searchCategory === null && !searchValue}
 				<ul class="space-y-1">
 					{#each Object.entries(categories) as [key, category]}
