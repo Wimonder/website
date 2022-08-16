@@ -6,7 +6,7 @@
 	import type { LayoutData } from './$types';
 
 	export let data: LayoutData;
-	$: resumeUrl = data.layoutData.resumeUrl;
+	$: resumeUrl = data.resumeUrl;
 </script>
 
 <Header resume={resumeUrl} />
@@ -14,4 +14,4 @@
 	<slot />
 </main>
 <Footer resume={resumeUrl} />
-<SearchMenu {resumeUrl} blogPosts={data.layoutData.posts} />
+<SearchMenu {resumeUrl} blogPosts={data.posts} />

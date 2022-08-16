@@ -1,19 +1,18 @@
-import { json } from '@sveltejs/kit';
 import type { PreviewPost } from '$api/posts';
 import { fetchPosts } from '$api/posts';
 import { fetchWhoamiData } from '$api/whoami';
-import type { RequestHandler } from '../$types';
+import type { PageServerLoad } from './$types';
 
-export interface LayoutData {
+interface LayoutProps {
 	resumeUrl: string;
 	posts: PreviewPost[];
 }
 
-export const GET: RequestHandler<LayoutData> = async () => {
+export const load: PageServerLoad<LayoutProps> = async () => {
 	const whoamiData = await fetchWhoamiData();
 	const posts = await fetchPosts();
-	return json({
+	return {
 		...whoamiData.whoami,
 		posts
-	});
+	};
 };
