@@ -16,7 +16,13 @@
 		height: '20px'
 	});
 	let open = false;
+	let innerWidth: number;
+	$: if (innerWidth > 640) {
+		open = false;
+	}
 </script>
+
+<svelte:window bind:innerWidth />
 
 <nav class="z-10 flex sm:h-16 h-12 w-full text-primary dark:text-primary-dark">
 	<div class="m-auto flex w-full max-w-4xl justify-between px-4">
