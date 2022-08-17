@@ -1,6 +1,6 @@
 <div align="center">
   <h3 align="center">My Website</h3>
-  Built with [Svelte](https://svelte.dev/) and [SvelteKit](https://reactjs.org/)
+  Built with <a href="https://svelte.dev/">Svelte</a> and <a href="https://kit.svelte.dev/">SvelteKit</a>
 </div>
 <hr />
 
