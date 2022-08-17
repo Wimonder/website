@@ -1,38 +1,78 @@
-# create-svelte
+<div align="center">
+  <h3 align="center">My Website</h3>
+</div>
+<hr />
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#scripts">Scripts</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
 
-## Creating a project
+<!-- GETTING STARTED -->
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Getting Started
 
-```bash
-# create a new project in the current directory
-npm init svelte
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-# create a new project in my-app
-npm init svelte my-app
-```
+### Prerequisites
 
-## Developing
+- npm
+- node
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Installation
 
-```bash
-npm run dev
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Wimonder/website/
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+### Scripts
 
-## Building
+#### SvelteKit
 
-To create a production version of your app:
+- development server
+  ```sh
+  npm run dev
+  ```
+- build the production version
+  ```sh
+  npm run build
+  ```
+- format
+  ```sh
+  npm run format
+  ```
+- lint
+  ```sh
+  npm run lint
+  ```
 
-```bash
-npm run build
-```
+<!-- LICENSE -->
 
-You can preview the production build with `npm run preview`.
+## License
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[license-shield]: https://img.shields.io/github/license/Wimonder/website.svg?style=for-the-badge
+[license-url]: https://github.com/Wimonder/website/blob/main/LICENSE
