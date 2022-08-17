@@ -68,9 +68,9 @@ To get a local copy up and running follow these simple example steps.
 
 #### Turborepo
 
-The turborepo commands operate and both the `cms` and `site` apps.
+The turborepo commands operate on both the `cms` and `site` apps.
 
-- development server
+- run development server
   ```sh
   npm run dev
   ```
@@ -78,11 +78,11 @@ The turborepo commands operate and both the `cms` and `site` apps.
   ```sh
   npm run build
   ```
-- format
+- format the code
   ```sh
   npm run format
   ```
-- lint
+- lint the code
   ```sh
   npm run lint
   ```

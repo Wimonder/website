@@ -1,5 +1,6 @@
 <div align="center">
   <h3 align="center">My Website</h3>
+  Built with [Svelte](https://svelte.dev/) and [SvelteKit](https://reactjs.org/)
 </div>
 <hr />
 
@@ -46,7 +47,7 @@ To get a local copy up and running follow these simple example steps.
 
 #### SvelteKit
 
-- development server
+- run development server
   ```sh
   npm run dev
   ```
@@ -54,11 +55,11 @@ To get a local copy up and running follow these simple example steps.
   ```sh
   npm run build
   ```
-- format
+- format the code
   ```sh
   npm run format
   ```
-- lint
+- lint the code
   ```sh
   npm run lint
   ```
