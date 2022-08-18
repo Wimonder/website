@@ -165,15 +165,15 @@
 </svelte:head>
 
 {#if $searchMenuOpen}
-	<div class="absolute h-screen w-full z-20 bg-background/50 dark:bg-background-dark/50" />
+	<div class="absolute z-20 h-screen w-full bg-background/50 dark:bg-background-dark/50" />
 	<div
-		class="absolute rounded-xl px-3 pb-3 flex flex-col
-		dark:shadow-[0_0px_150px_40px_rgba(250,250,250,0.15)] shadow-[0_0px_150px_40px_rgba(0,0,0,0.3)]
-		top-1/4 left-1/2 -translate-x-1/2 w-4/5 lg:max-w-3xl lg:w-full z-30 bg-background dark:bg-background-dark"
+		class="absolute top-1/4 left-1/2 z-30 flex w-4/5
+		-translate-x-1/2 flex-col
+		rounded-xl bg-background px-3 pb-3 shadow-[0_0px_150px_40px_rgba(0,0,0,0.3)] dark:bg-background-dark dark:shadow-[0_0px_150px_40px_rgba(250,250,250,0.15)] lg:w-full lg:max-w-3xl"
 	>
 		<div class="flex items-start">
 			<input
-				class="w-full bg-background dark:bg-background-dark py-4 focus:outline-none placeholder-secondary dark:placeholder-secondary-dark"
+				class="w-full bg-background py-4 placeholder-secondary focus:outline-none dark:bg-background-dark dark:placeholder-secondary-dark"
 				placeholder="What are you looking for?"
 				bind:value={searchValue}
 			/>
@@ -182,7 +182,7 @@
 			</button>
 		</div>
 		<Divider />
-		<div class="text-secondary dark:text-secondary-dark overflow-y-scroll max-h-96">
+		<div class="max-h-96 overflow-y-scroll text-secondary dark:text-secondary-dark">
 			{#if searchCategory === null && !searchValue}
 				<ul class="space-y-1">
 					{#each Object.entries(categories) as [key, category]}
@@ -195,7 +195,7 @@
 				</ul>
 			{:else}
 				{#if searchCategory !== null}
-					<div class="text-sm mb-1 flex items-center">
+					<div class="mb-1 flex items-center text-sm">
 						<button
 							class="hover:text-primary dark:hover:text-primary-dark"
 							on:click={() => {
@@ -229,7 +229,7 @@
 							{:else}
 								{#each searchResults.results as result}
 									{#if result.results.length}
-										<div class="text-sm mb-1">
+										<div class="mb-1 text-sm">
 											{result.category[0].toUpperCase() + result.category.slice(1)}
 										</div>
 										{#each result.results as item}

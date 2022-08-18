@@ -9,9 +9,9 @@
 
 <ul>
 	{#each education as ed}
-		<li class="flex sm:my-2 my-4">
+		<li class="my-4 flex sm:my-2 ">
 			<div class="flex flex-col sm:flex-row">
-				<div class="w-24 sm:mr-20 text-secondary dark:text-secondary-dark">
+				<div class="w-24 text-secondary dark:text-secondary-dark sm:mr-20">
 					<time datetime={ed.start}>{new Date(ed.start).getFullYear()}</time>
 					-
 					<time datetime={ed.end}

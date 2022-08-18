@@ -10,7 +10,7 @@
 </script>
 
 <Header resume={resumeUrl} />
-<main class="m-auto sm:mt-8 mt-4 w-full max-w-3xl px-8">
+<main class="m-auto mt-4 w-full max-w-3xl px-8 sm:mt-8">
 	<slot />
 </main>
 <Footer resume={resumeUrl} />

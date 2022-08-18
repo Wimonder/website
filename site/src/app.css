@@ -133,5 +133,5 @@ html {
 }
 
 #svelte {
-	@apply flex h-full min-h-screen w-full flex-col bg-background dark:bg-background-dark text-primary dark:text-primary-dark;
+	@apply flex h-full min-h-screen w-full flex-col bg-background text-primary dark:bg-background-dark dark:text-primary-dark;
 }

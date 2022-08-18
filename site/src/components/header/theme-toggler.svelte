@@ -50,7 +50,7 @@
 
 <i
 	id="theme-toggler"
-	class="flex cursor-pointer rounded-sm p-2 text-secondary dark:text-secondary-dark hover:bg-gray-100 dark:hover:bg-gray-800"
+	class="flex cursor-pointer rounded-sm p-2 text-secondary hover:bg-gray-100 dark:text-secondary-dark dark:hover:bg-gray-800"
 	on:click={toggleTheme}
 >
 	{#if currentTheme}

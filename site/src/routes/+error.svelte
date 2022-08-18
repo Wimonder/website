@@ -3,7 +3,7 @@
 	import Error from '$components/error.svelte';
 </script>
 
-<div class="flex flex-col text-center justify-center sm:h-80">
+<div class="flex flex-col justify-center text-center sm:h-80">
 	{#if $page.status == 404}
 		<!-- Use '==' instead of '===' to match string/number status code (just to be sure) -->
 		<Error

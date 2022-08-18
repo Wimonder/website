@@ -24,9 +24,9 @@
 
 <svelte:window bind:innerWidth />
 
-<nav class="z-10 flex sm:h-16 h-12 w-full text-primary dark:text-primary-dark">
+<nav class="z-10 flex h-12 w-full text-primary dark:text-primary-dark sm:h-16">
 	<div class="m-auto flex w-full max-w-4xl justify-between px-4">
-		<div class="sm:hidden flex items-center">
+		<div class="flex items-center sm:hidden">
 			<Hamburger bind:open />
 		</div>
 		<div class="flex">

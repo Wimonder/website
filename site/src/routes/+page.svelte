@@ -37,7 +37,7 @@
 	<div class="pr-5">
 		<h1 class="mb-2 text-4xl font-bold text-accent dark:text-accent-dark">
 			<span
-				class="text-soft dark:text-soft-dark mr-1 absolute -translate-x-full lg:inline-block hidden"
+				class="absolute mr-1 hidden -translate-x-full text-soft dark:text-soft-dark lg:inline-block"
 				>~$</span
 			>{data.name}
 		</h1>
@@ -46,9 +46,9 @@
 		<p>
 			Tip: Use <button
 				on:click|preventDefault={toggleSearchMenu}
-				class="border border-primary dark:border-primary-dark hover:bg-primary
-				dark:hover:bg-primary-dark rounded-md hover:text-primary-dark dark:hover:text-primary px-1
-				text-sm"><span class="font-semibold">CTRL</span> K</button
+				class="rounded-md border border-primary px-1
+				text-sm hover:bg-primary hover:text-primary-dark dark:border-primary-dark dark:hover:bg-primary-dark
+				dark:hover:text-primary"><span class="font-semibold">CTRL</span> K</button
 			> to quickly search through this site.
 		</p>
 		<div class="mt-2 space-x-4">
@@ -56,7 +56,7 @@
 				<Link href={iconLink.link} external={true}>
 					<i
 						aria-hidden="true"
-						class="inline-flex text-soft dark:text-soft-dark mt-3 w-6 h-6 hover:text-primary dark:hover:text-primary-dark"
+						class="mt-3 inline-flex h-6 w-6 text-soft hover:text-primary dark:text-soft-dark dark:hover:text-primary-dark"
 						>{@html iconLink.icon}</i
 					><span class="sr-only">{iconLink.text}</span>
 				</Link>
@@ -69,7 +69,7 @@
 			width="500px"
 			height="500px"
 			alt="Wim's profile"
-			class="rounded-3xl sm:block hidden"
+			class="hidden rounded-3xl sm:block"
 		/>
 	</div>
 </section>

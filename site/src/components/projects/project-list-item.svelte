@@ -10,7 +10,7 @@
 
 <a name={slug}>
 	<article class="text-primary dark:text-primary-dark">
-		<h3 class="text-2xl text-inherit font-bold">{title}</h3>
+		<h3 class="text-2xl font-bold text-inherit">{title}</h3>
 		<p>
 			<Link styles="text-link dark:text-link-dark hover:underline" href={link} external={true}
 				>Preview</Link
@@ -23,6 +23,6 @@
 		<div class="mt-2">
 			<TextContent blocks={content} />
 		</div>
-		<img src={getImageUrl(mainImage).url()} alt="Project" class="rounded-md mt-2" />
+		<img src={getImageUrl(mainImage).url()} alt="Project" class="mt-2 rounded-md" />
 	</article>
 </a>

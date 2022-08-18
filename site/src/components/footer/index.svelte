@@ -22,14 +22,14 @@
 </script>
 
 <footer class="mt-16 w-full">
-	<div class="m-auto flex=col px-8 max-w-3xl items-center">
+	<div class="flex=col m-auto max-w-3xl items-center px-8">
 		<div class="flex h-full w-full justify-between">
 			{#each allRoutes as routes}
 				<FooterHolder items={routes} />
 			{/each}
 		</div>
-		<p class="sm:mt-20 mt-10 sm:mb-20 mb-10 w-full text-primary dark:text-primary-dark text-center">
-			Made by Wim Onderbeke with <i aria-hidden="true" class="text-red-600 inline-block w-5 h-5"
+		<p class="mt-10 mb-10 w-full text-center text-primary dark:text-primary-dark sm:mt-20 sm:mb-20">
+			Made by Wim Onderbeke with <i aria-hidden="true" class="inline-block h-5 w-5 text-red-600"
 				>{@html heartIcon.icon}</i
 			><span class="sr-only">{heartIcon.text}</span>, find this website on
 			<Link

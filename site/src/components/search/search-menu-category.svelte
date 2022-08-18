@@ -11,9 +11,9 @@
 	export let icon: string;
 </script>
 
-<li class="group hover:bg-background-soft dark:hover:bg-secondary rounded-lg">
-	<button class="w-full h-full flex pl-4 py-3 items-center" on:click={selectCategory}>
-		<i class="inline mr-3 group-hover:text-primary dark:group-hover:text-primary-dark"
+<li class="group rounded-lg hover:bg-background-soft dark:hover:bg-secondary">
+	<button class="flex h-full w-full items-center py-3 pl-4" on:click={selectCategory}>
+		<i class="mr-3 inline group-hover:text-primary dark:group-hover:text-primary-dark"
 			>{@html icon}</i
 		>
 		<div>{category[0].toUpperCase() + category.slice(1)}</div>

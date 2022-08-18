@@ -9,7 +9,7 @@
 </script>
 
 <li
-	class={`px-2 py-1 text-lg hover:bg-gray-100 dark:hover:bg-gray-800 hover:rounded-sm ${
+	class={`px-2 py-1 text-lg hover:rounded-sm hover:bg-gray-100 dark:hover:bg-gray-800 ${
 		isActive && 'font-bold'
 	}`}
 >

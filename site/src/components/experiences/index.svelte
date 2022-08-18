@@ -9,9 +9,9 @@
 
 <ul class="mt-3">
 	{#each experiences as exp}
-		<li class="flex items-center sm:my-2 my-4">
+		<li class="my-4 flex items-center sm:my-2">
 			<div class="flex flex-col sm:flex-row">
-				<div class="w-24 sm:mr-20 text-secondary dark:text-secondary-dark">
+				<div class="w-24 text-secondary dark:text-secondary-dark sm:mr-20">
 					<time datetime={exp.start}>{new Date(exp.start).getFullYear()}</time>
 					-
 					<time datetime={exp.end}
