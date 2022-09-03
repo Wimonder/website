@@ -17,14 +17,14 @@
 	"dependencies": {
 		"@sanity/code-input": "studio-v3",
 		"@sanity/eslint-config-studio": "^2.0.0",
-		"eslint": "^8.22.0",
+		"eslint": "^8.23.0",
 		"react": "^17.0.0",
 		"react-dom": "^17.0.0",
 		"sanity": "dev-preview",
 		"styled-components": "^5.2.0"
 	},
 	"devDependencies": {
-		"@sanity/cli": "^3.0.0-dev-preview.11",
+		"@sanity/cli": "^3.0.0-v3-v2-pte.56",
 		"vite": "^3.0.9"
 	}
 }
