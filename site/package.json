@@ -41,7 +41,7 @@
 		"@portabletext/svelte": "^1.0.1",
 		"@sanity/client": "^3.3.6",
 		"@sanity/image-url": "^1.0.1",
-		"@sveltejs/adapter-vercel": "^1.0.0-next.69",
+		"@sveltejs/adapter-vercel": "^1.0.0-next.84",
 		"feather-icons": "^4.29.0",
 		"fuse.js": "^6.6.2",
 		"groq": "^2.29.3",
